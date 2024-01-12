@@ -125,7 +125,7 @@ def main(path):
     number_of_useful_files = 0
 
     #create a new file where the abbadingo file will be written in
-    with open("lightftp9jan.dat", "w") as abbadingo:
+    with open("abbadingo.dat", "w") as abbadingo:
         # Go over every file in the folder
         for file_path in all_files:
             if file_path.startswith(f"{path}/127.000.000.001.02200"):
