@@ -52,8 +52,9 @@ dot -Tpdf abbadingo.dat.ff.final.dot -o abbadingo-out.pdf
 ```
 
 #Results
+The following results came back for fuzzing LightFTP and Bftpd:
+
 LightFTP:
 ![alt text](https://github.com/Jer111/differential-fuzzing-of-stateful-systems/blob/main/lightftp_60min.png)
 Bftpd:
-The following results came back for fuzzing LightFTP and Bftpd:
 ![alt text](https://github.com/Jer111/differential-fuzzing-of-stateful-systems/blob/main/bftpd_60min.png)
