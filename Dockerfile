@@ -14,6 +14,7 @@ RUN apt-get -y update && \
     llvm-dev \
     libgnutls28-dev \
     tcpdump \
+    wget 
     
 # Add a new user ubuntu, pass: ubuntu
 RUN groupadd ubuntu && \
@@ -60,7 +61,8 @@ ENV PROFUZZ="/home/ubuntu/profuzzbench/subjects/FTP/BFTPD"
 
 # Set up BFTPD for fuzzing including profuzzbench
 RUN cd ${WORKDIR} && \
-    git clone https://github.com/gamman/bftpd.git && \
+    wget https://sourceforge.net/projects/bftpd/files/bftpd/bftpd-5.7/bftpd-5.7.tar.gz && \
+    tar -zxvf bftpd-5.7.tar.gz && \
     git clone https://github.com/profuzzbench/profuzzbench.git && \
     cd bftpd && \
     patch -p1 < ${PROFUZZ}/fuzzing.patch && \ && \
